@@ -1,11 +1,31 @@
-# ZMK Module Template
+### Zongle ZMK Module
+This contains the zmk module defintions for Zongle, a super compact nrf52833 based dongle.
 
-This repository contains a template for a ZMK module, as it would most frequently be used. 
 
-## Usage
+### Usage in your ZMK config
 
-Read through the [ZMK Module Creation](https://zmk.dev/docs/development/module-creation) page for details on how to configure this template.
 
-## More Info
+#### Prerequisites
+Add the following entries to your `config/west.yml`:
+```diff
+...
+remotes:
++    - name: vuoz 
++      url-base: https://github.com/vuoz
+projects
++    - name: zmk-component-zongle
++      remote: vuoz 
++      revision: main
+...
+```
+#### Configuring the dongle
+```diff
+include:
++   - board: zongle
++     shield: my_keeb_dongle
 
-For more info on modules, you can read through  through the [Zephyr modules page](https://docs.zephyrproject.org/3.5.0/develop/modules.html) and [ZMK's page on using modules](https://zmk.dev/docs/features/modules). [Zephyr's west manifest page](https://docs.zephyrproject.org/3.5.0/develop/west/manifest.html#west-manifests) may also be of use.
++   - board: zongle
++     shield: settings_reset
+...
+```
+

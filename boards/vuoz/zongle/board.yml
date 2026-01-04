@@ -1,0 +1,11 @@
+board:
+  name: zongle
+  vendor: vuoz
+  socs:
+    - name: nrf52833
+  revision:
+    format: major.minor.patch
+    default: 0.5.0
+    revisions:
+      - name: 0.5.0
+
