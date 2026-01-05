@@ -1,7 +1,6 @@
 # SPDX-License-Identifier: Apache-2.0
+
 config BOARD_ZONGLE
-    bool "Zongle (nRF52833)"
-    depends on SOC_NRF52833_QIAA
     select SOC_NRF52833_QIAA
     imply RETAINED_MEM
     imply RETENTION
