@@ -33,7 +33,6 @@
 };
 
 zephyr_udc0: &usbd {
-	compatible = "nordic,nrf-usbd";
 	status = "okay";
 };
 
@@ -47,8 +46,8 @@ zephyr_udc0: &usbd {
         #address-cells = <1>;
         #size-cells = <1>;
 
-        code_partition: partition@0 {
-            reg = <0x00000000 0x0006c000>;
+        code_partition: partition@1000 {
+            reg = <0x00001000 0x0006b000>;
         };
 
         /*
