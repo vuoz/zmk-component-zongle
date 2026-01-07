@@ -47,11 +47,8 @@ zephyr_udc0: &usbd {
         #address-cells = <1>;
         #size-cells = <1>;
 
-        sd_partition: partition@0 {
-            reg = <0x00000000 0x00026000>;
-        };
-        code_partition: partition@26000 {
-            reg = <0x00026000 0x00046000>;
+        code_partition: partition@0 {
+            reg = <0x00000000 0x0006c000>;
         };
 
         /*
