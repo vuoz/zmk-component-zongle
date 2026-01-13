@@ -30,7 +30,7 @@ include:
 ```
 #### Recommendation for flashing new firmware
 Add this combo ( change the key positions as you like ) to you keymap file to be 
-able to enter bootloader mode on the dongle without having to press the physical button
+able to enter bootloader mode on the dongle without having to press the physical button.    
 Now by pressing the keys on the given positions simultaneously you can enter the bootloader mode.
 ```
         combos {
